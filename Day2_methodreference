@@ -1,0 +1,32 @@
+//with a static method in class
+interface New{
+   void show();
+}
+class Demo{
+   public static void display(){
+       System.out.println("Hello Java");
+   }
+}
+public class MethodReference {
+   public static void main (String args[]){
+       New ref=Demo::display;
+       ref.show();
+   }
+}
+
+//without a static method in class
+// interface New{
+//    void show();
+// }
+// class Demo{
+//     void display(){
+//        System.out.println("Hello Java");
+//    }
+// }
+// public class MethodReference {
+//    public static void main (String args[]){
+//        Demo d=new Demo();
+//        New ref=d::display;
+//        ref.show();
+//    }
+// }
