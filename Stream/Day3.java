@@ -34,7 +34,18 @@ public class Day3 {
 
         //7 replace all negative numbers with 0 and find the sum using reduce
         List<Integer> l3=List.of(1,-3,2,-5,6,4);
-        
+        int sumNonNegative = l3.stream().map(e -> e < 0 ? 0 : e).reduce(0, (acc, e) -> acc + e);
+      System.out.println(sumNonNegative);
+
+      // //8 wap to concatenate all the strings in a list using reduce() method
+      List<String> strings = List.of("Hello", " ", "World", "!");   
+      String result = strings.stream().reduce("", (acc, s) -> acc + s);
+      System.out.println(result);
+
+      // //9 wap to find the longest string in a list using reduce() method
+      List<String> stringList = List.of("Java", "Stream", "API", "Programming", "Language");
+      String longest = stringList.stream().reduce("", (s1, s2) -> s1.length() > s2.length() ? s1 : s2);
+      System.out.println(longest);
 
     }
 }
