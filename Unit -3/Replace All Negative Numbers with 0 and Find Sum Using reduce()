@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class streamapi5 {
+    public static void main(String[] args) {
+
+        List<Integer> list = Arrays.asList(5, -3, 10, -2, 7, -1);
+
+        int sum = list.stream().map(n -> n < 0 ? 0 : n).reduce(0, (a, b) -> a + b);
+
+        System.out.println("Sum = " + sum);
+    }
+}

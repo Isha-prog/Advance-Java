@@ -1,0 +1,13 @@
+import java.util.*;
+import java.util.stream.*;
+
+public class streamapi7 {
+    public static void main(String[] args) {
+
+        List<Integer> list = Arrays.asList(-10, 5, 25, 30, -5, 15, 40);
+
+        List<Integer> result = list.stream().filter(n -> n > 20).collect(Collectors.toList());
+
+        System.out.println("Positive numbers greater than 20: " + result);
+    }
+}

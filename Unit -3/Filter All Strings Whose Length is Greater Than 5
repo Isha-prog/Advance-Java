@@ -1,0 +1,13 @@
+import java.util.*;
+import java.util.stream.*;
+
+public class streamapi7 {
+    public static void main(String[] args) {
+
+        List<String> list = Arrays.asList("Java", "Python", "Spring", "C", "Hibernate", "Go");
+
+        List<String> result = list.stream().filter(s -> s.length() > 5).collect(Collectors.toList());
+
+        System.out.println("Strings length > 5: " + result);
+    }
+}

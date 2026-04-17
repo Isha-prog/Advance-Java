@@ -1,0 +1,13 @@
+import java.util.*;
+import java.util.stream.*;
+
+public class streamapi7 {
+    public static void main(String[] args) {
+
+        List<Integer> list = Arrays.asList(5, 10, 15, 20);
+
+        List<Integer> newList = list.stream().map(n -> n + 10).collect(Collectors.toList());
+
+        System.out.println("Updated List: " + newList);
+    }
+}

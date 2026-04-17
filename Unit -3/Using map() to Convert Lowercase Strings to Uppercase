@@ -1,0 +1,14 @@
+
+import java.util.*;
+import java.util.stream.*;
+
+public class streamapi7 {
+    public static void main(String[] args) {
+
+        List<String> list = Arrays.asList("java", "python", "spring", "hibernate");
+
+        List<String> upperList = list.stream().map(s -> s.toUpperCase()).collect(Collectors.toList());
+
+        System.out.println("Uppercase List: " + upperList);
+    }
+}

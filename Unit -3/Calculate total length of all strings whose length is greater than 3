@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class streamapi5 {
+    public static void main(String[] args) {
+
+        List<String> list = Arrays.asList("Java", "C", "Python", "Go", "Spring");
+
+        int totalLength = list.stream().filter(s -> s.length() > 3).map(String::length).reduce(0, Integer::sum);
+
+        System.out.println("Total length = " + totalLength);
+    }
+}

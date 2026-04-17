@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class streamapi5 {
+    public static void main(String[] args) {
+
+        List<Integer> list = Arrays.asList(10, 25, 5, 40, 15);
+
+        int max = list.stream().reduce((a, b) -> a > b ? a : b).get();
+
+        System.out.println("Maximum = " + max);
+    }
+}

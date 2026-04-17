@@ -1,0 +1,13 @@
+import java.util.*;
+import java.util.stream.*;
+
+public class streamapi7 {
+    public static void main(String[] args) {
+
+        List<Integer> list = Arrays.asList(10, 55, 60, 30, 80, 45);
+
+        List<Integer> newList = list.stream().filter(n -> n > 50).collect(Collectors.toList());
+
+        System.out.println("Numbers greater than 50: " + newList);
+    }
+}
